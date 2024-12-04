@@ -1,7 +1,7 @@
 # TODO: https://docs.astral.sh/uv/guides/integration/docker/#configuring-watch-with-docker-compose
 services:
   faster-whisper-server-cuda:
-    image: fedirz/faster-whisper-server:latest-cuda
+    image: slabstech/faster-whisper-server:latest-cuda
     build:
       dockerfile: Dockerfile.cuda
       context: .
@@ -29,7 +29,7 @@ services:
               #   device_ids:
               #   - nvidia.com/gpu=all
   faster-whisper-server-cpu:
-    image: fedirz/faster-whisper-server:latest-cpu
+    image: slabstech/faster-whisper-server:latest-cpu
     build:
       dockerfile: Dockerfile.cpu
       context: .

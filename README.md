@@ -23,17 +23,17 @@ See [OpenAI API reference](https://platform.openai.com/docs/api-reference/audio)
 ## Quick Start
 [Hugging Face Space](https://huggingface.co/spaces/Iatalking/fast-whisper-server)
 
-![image](https://github.com/fedirz/faster-whisper-server/assets/76551385/6d215c52-ded5-41d2-89a5-03a6fd113aa0)
+![image](https://github.com/sachinsshetty/faster-whisper-server/assets/76551385/6d215c52-ded5-41d2-89a5-03a6fd113aa0)
 
 Using Docker
 ```bash
-docker run --gpus=all --publish 8000:8000 --volume ~/.cache/huggingface:/root/.cache/huggingface fedirz/faster-whisper-server:latest-cuda
+docker run --gpus=all --publish 8000:8000 --volume ~/.cache/huggingface:/root/.cache/huggingface sachinsshetty/faster-whisper-server:latest-cuda
 # or
-docker run --publish 8000:8000 --volume ~/.cache/huggingface:/root/.cache/huggingface fedirz/faster-whisper-server:latest-cpu
+docker run --publish 8000:8000 --volume ~/.cache/huggingface:/root/.cache/huggingface sachinsshetty/faster-whisper-server:latest-cpu
 ```
 Using Docker Compose
 ```bash
-curl -sO https://raw.githubusercontent.com/fedirz/faster-whisper-server/master/compose.yaml
+curl -sO https://raw.githubusercontent.com/sachinsshetty/faster-whisper-server/master/compose.yaml
 docker compose up --detach faster-whisper-server-cuda
 # or
 docker compose up --detach faster-whisper-server-cpu
@@ -83,7 +83,7 @@ curl http://localhost:8000/v1/audio/translations -F "file=@audio.wav"
 ### Live Transcription (using WebSocket)
 From [live-audio](./examples/live-audio) example
 
-https://github.com/fedirz/faster-whisper-server/assets/76551385/e334c124-af61-41d4-839c-874be150598f
+https://github.com/sachinsshetty/faster-whisper-server/assets/76551385/e334c124-af61-41d4-839c-874be150598f
 
 [websocat](https://github.com/vi/websocat?tab=readme-ov-file#installation) installation is required.
 Live transcription of audio data from a microphone.
